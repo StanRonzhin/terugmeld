@@ -37,8 +37,8 @@
 			// Iterate over the JSON object
 			for (var i = 0, len = feat.length; i < len; i++) {
                 var wkt_data = new Wkt.Wkt();
-                wkt_data.read(feat[i].geometry);
-                tableau.log( wkt_data);
+                wkt_data.read(JSON.stringify(feat[i].geometry));
+                tableau.log(wkt_data);
 
 				tableData.push({
 					"basisregistratie": feat[i].properties.basisregistratie,
