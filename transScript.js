@@ -18,6 +18,7 @@ $(document).ready(function() {
 
                 var coordWGS =  proj4('EPSG:28992', 'WGS84', coordRD);
                 console.log(coordWGS);
+                console.log(JSON.stringify(coordWGS));
 
                 var wkt_data = new Wkt.Wkt();
                 wkt_data.read(JSON.stringify(coordWGS));
