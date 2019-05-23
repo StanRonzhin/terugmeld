@@ -46,6 +46,7 @@
                     "location": wkt_data.toJson()
 				});
 			}
+            tableau.log(tableData);
 
 			table.appendRows(tableData);
 			doneCallback();
