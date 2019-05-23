@@ -17,7 +17,7 @@ $(document).ready(function() {
             //
             // ]);
 
-            proj4.defs('urn:x-ogc:def:crs:EPSG:28992', proj4.defs('EPSG:4326'));
+            proj4.defs('urn:x-ogc:def:crs:EPSG:28992', proj4.defs('EPSG:28992'));
 
             for (var i = 0, len = feat.length; i < len; i++) {
                 var coordRD = feat[i].geometry.coordinates;
