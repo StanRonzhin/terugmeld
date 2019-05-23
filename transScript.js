@@ -21,6 +21,7 @@ $(document).ready(function() {
 
             for (var i = 0, len = feat.length; i < len; i++) {
                 var coordRD = feat[i].geometry.coordinates;
+                console.log(coordRD);
 
                 var coordWGS =  proj4('EPSG:28992', 'WGS84', coordRD);
                 console.log(coordWGS);
