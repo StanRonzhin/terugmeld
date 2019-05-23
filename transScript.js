@@ -20,7 +20,7 @@ $(document).ready(function() {
                 console.log(coordWGS);
 
                 var wkt_data = new Wkt.Wkt();
-                wkt_data.read(coordWGS);
+                wkt_data.read(JSON.stringify(coordWGS));
             }
 
         });
