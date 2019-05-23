@@ -34,10 +34,22 @@
 				tableData = [];
             tableau.log(feat);
 
+            // let sourceProj = ''
+            proj4.defs([
+                [
+                    'EPSG:28992',
+                    'urn:ogc:def:crs:EPSG::28992']
+
+            ]);
+
 			// Iterate over the JSON object
 			for (var i = 0, len = feat.length; i < len; i++) {
-                var wkt_data = new Wkt.Wkt();
-                wkt_data.read(JSON.stringify(feat[i].geometry));
+                var coordRD = feat[i].geometry.coordinates;
+
+               var coordWGS =  proj4('EPSG:28992', 'WGS84', coordRD);
+
+               var wkt_data = new Wkt.Wkt();
+                wkt_data.read(coordWGS);
 
 				tableData.push({
 					"basisregistratie": feat[i].properties.basisregistratie,
