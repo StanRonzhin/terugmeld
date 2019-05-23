@@ -32,7 +32,7 @@
 		$.getJSON("https://stanronzhin.github.io/terugmeld/data.json", function(resp) {
 			var feat = resp.features,
 				tableData = [];
-			console.log(feat).
+			console.log(feat)
 
 			// Iterate over the JSON object
 			for (var i = 0, len = feat.length; i < len; i++) {
