@@ -34,7 +34,6 @@
 				tableData = [];
             tableau.log(feat);
 
-            // let sourceProj = ''
             proj4.defs([
                 [
                     'EPSG:28992',
@@ -47,15 +46,17 @@
                 var coordRD = feat[i].geometry.coordinates;
 
                var coordWGS =  proj4('EPSG:28992', 'WGS84', coordRD);
+                tableau.log(coordWGS);
 
                var wkt_data = new Wkt.Wkt();
                 wkt_data.read(coordWGS);
+
 
 				tableData.push({
 					"basisregistratie": feat[i].properties.basisregistratie,
 					"bronhoudernaam": feat[i].properties.bronhoudernaam,
 					"status": feat[i].properties.status,
-                    "location": wkt_data.toJson()
+                    // "location": wkt_data.toJson()
 				});
 			}
             tableau.log(tableData);
