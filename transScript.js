@@ -20,8 +20,12 @@ $(document).ready(function() {
                 console.log(coordWGS);
                 console.log(JSON.stringify(coordWGS));
 
+                var geoJson = '{"type":"Point","coordinates":' + JSON.stringify(coordWGS) + '}';
+
+
                 var wkt_data = new Wkt.Wkt();
-                wkt_data.read(JSON.stringify(coordWGS));
+                wkt_data.read(geoJson);
+                console.log(wkt_data);
             }
 
         });
