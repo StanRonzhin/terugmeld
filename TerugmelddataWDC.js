@@ -2,6 +2,13 @@
 	//Create the connector
     var myConnector = tableau.makeConnector();
 
+
+    //the fields I surely need are:
+    // - tijdstipStatusWijziging
+    // - tijdstipWijziging
+    // - tijdstipRegistratie
+    // - meldingsnummer
+
 	myConnector.getSchema = function (schemaCallback) {
 		var cols = [{
 			id: "basisregistratie",
@@ -11,11 +18,15 @@
 			alias: "bronhoudernaam",
 			dataType: tableau.dataTypeEnum.string
 		}, {
+            id: "bronhoudercode",
+            alias: "bronhoudercode",
+            dataType: tableau.dataTypeEnum.string
+        }, {
 			id: "status",
 			dataType: tableau.dataTypeEnum.string
 		}, {
             id: "omschrijving",
-            alias: "какойто стаф",
+            alias: "some data",
             dataType: tableau.dataTypeEnum.string
 		}, {
             id: "location",
@@ -50,6 +61,7 @@
 				tableData.push({
 					"basisregistratie": feat[i].properties.basisregistratie,
 					"bronhoudernaam": feat[i].properties.bronhoudernaam,
+                    "bronhoudercode": feat[i].properties.bronhoudercode,
 					"status": feat[i].properties.status,
 					"omschrijving": feat[i].properties.omschrijving,
                     "location": wkt_data.toJson()
