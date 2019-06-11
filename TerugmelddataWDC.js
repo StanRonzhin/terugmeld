@@ -13,7 +13,7 @@
 		var cols = [{
 			id: "basisregistratie",
 			dataType: tableau.dataTypeEnum.string
-		},  {
+		}, {
 			id: "bronhoudernaam",
 			alias: "bronhoudernaam",
 			dataType: tableau.dataTypeEnum.string
@@ -25,7 +25,7 @@
             id: "meldingsnummer",
             alias: "meldingsnummer",
             dataType: tableau.dataTypeEnum.string
-        },{
+        }, {
 			id: "status",
 			dataType: tableau.dataTypeEnum.string
 		}, {
@@ -33,6 +33,10 @@
             alias: "some data",
             dataType: tableau.dataTypeEnum.string
 		}, {
+            id: "tijdstipStatusWijziging",
+            alias: "time 1",
+            dataType: tableau.dataTypeEnum.string
+        }, {
             id: "location",
             dataType: tableau.dataTypeEnum.geometry
 		}];
@@ -67,6 +71,7 @@
 					"bronhoudernaam": feat[i].properties.bronhoudernaam,
                     "bronhoudercode": feat[i].properties.bronhoudercode,
                     "meldingsnummer": feat[i].properties.meldingsNummer,
+                    "tijdstipStatusWijziging": feat[i].properties.tijdstipStatusWijziging,
 					"status": feat[i].properties.status,
 					"omschrijving": feat[i].properties.omschrijving,
                     "location": wkt_data.toJson()
