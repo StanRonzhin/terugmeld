@@ -47,12 +47,11 @@
                 var wkt_data = new Wkt.Wkt();
                 wkt_data.read(geoJson);
                 console.log(wkt_data);
-
-
 				tableData.push({
 					"basisregistratie": feat[i].properties.basisregistratie,
 					"bronhoudernaam": feat[i].properties.bronhoudernaam,
 					"status": feat[i].properties.status,
+					"omschrijving": feat[i].properties.omschrijving,
                     "location": wkt_data.toJson()
 				});
 			}
