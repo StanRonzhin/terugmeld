@@ -14,6 +14,10 @@
 			id: "status",
 			dataType: tableau.dataTypeEnum.string
 		}, {
+            id: "omschrijving",
+            alias: "какойто стаф",
+            dataType: tableau.dataTypeEnum.string
+		}, {
             id: "location",
             dataType: tableau.dataTypeEnum.geometry
 		}];
