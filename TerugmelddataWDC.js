@@ -22,6 +22,10 @@
             alias: "bronhoudercode",
             dataType: tableau.dataTypeEnum.string
         }, {
+            id: "meldingsnummer",
+            alias: "meldingsnummer",
+            dataType: tableau.dataTypeEnum.string
+        },{
 			id: "status",
 			dataType: tableau.dataTypeEnum.string
 		}, {
@@ -62,6 +66,7 @@
 					"basisregistratie": feat[i].properties.basisregistratie,
 					"bronhoudernaam": feat[i].properties.bronhoudernaam,
                     "bronhoudercode": feat[i].properties.bronhoudercode,
+                    "meldingsnummer": feat[i].properties.meldingsNummer,
 					"status": feat[i].properties.status,
 					"omschrijving": feat[i].properties.omschrijving,
                     "location": wkt_data.toJson()
